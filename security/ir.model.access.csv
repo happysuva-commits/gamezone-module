@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gamezone_game,GameZone Game Access,gamezone.model_gamezone_game,base.group_user,1,1,1,1
+access_gamezone_player,GameZone Player Access,gamezone.model_gamezone_player,base.group_user,1,1,1,1
+access_gamezone_team,GameZone Team Access,gamezone.model_gamezone_team,base.group_user,1,1,1,1
+access_gamezone_tournament,GameZone Tournament Access,gamezone.model_gamezone_tournament,base.group_user,1,1,1,1

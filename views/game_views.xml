@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_game_list" model="ir.ui.view">
+        <field name="name">gamezone.game.list</field>
+        <field name="model">gamezone.game</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="game_code" readonly="1"/>
+                        <field name="game_name"/>
+                <field name="max_players"/>
+                <field name="is_team_game"/>
+                <field name="game_code"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_game_form" model="ir.ui.view">
+        <field name="name">gamezone.game.form</field>
+        <field name="model">gamezone.game</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                            name="action_open_tournaments"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-trophy"
+                        >
+                            <field
+                                name="tournament_count"
+                                widget="statinfo"
+                                string="Tournaments"
+                            />
+                        </button>
+                                        <button
+                        name="action_open_players"
+                        type="object"
+                        class="oe_stat_button"
+                        icon="fa-users"
+                    >
+                        <field
+                            name="player_count"
+                            widget="statinfo"
+                            string="Players"
+                        />
+                    </button>
+
+</div>
+
+                    <group string="Create Method Practice">
+                        <button
+                            name="action_create_game_1"
+                            type="object"
+                            string="Create 1 - Cricket"
+                        />
+                    
+                        <button name="action_create_game_2"
+                                type="object"
+                                string="Create 2 - Football"/>
+
+                        <button name="action_create_game_uppercase"
+                                type="object"
+                                string="Create Uppercase Game"/>
+
+                        <button name="action_create_game_defaults"
+                                type="object"
+                                string="Create 3 - Default Values"/>
+
+                        <button name="action_create_game_condition"
+                                type="object"
+                                string="Create 4 - Condition Based"/>
+
+                        <button name="action_create_game_from_current"
+                                type="object"
+                                string="Create 5 - Copy Current Game"/>
+
+                        <button name="action_create_tournament_from_game"
+                                type="object"
+                                string="Create 6 - Game Tournament"/>
+
+                        <button name="action_create_three_games"
+                                type="object"
+                                string="Create 7 - VALORANT, CS2, PUBG"/>
+
+                <button name="action_create_football_team_game" type="object" string="Create 8 - Football Team Game"/>
+
+                <button name="action_start_game" type="object" string="Start Game"/>
+                <button name="action_finish_game" type="object" string="Finish Game"/>
+                <button name="action_update_winner" type="object" string="Update Winner"/>
+                <button name="action_update_score" type="object" string="Update Score"/>
+                <button name="action_update_game_5" type="object" string="Condition Update"/>
+                <button name="action_update_game_6" type="object" string="Update Players +5"/>
+</group>
+
+                    <group>
+                        <field name="game_name"/>
+                        <field name="max_players"/>
+                        <field name="is_team_game"/>
+                        <field name="state"/>
+                        <field name="winner"/>
+                        <field name="team_a_score"/>
+                        <field name="team_b_score"/>
+                    </group>
+
+                    <group string="Tournaments">
+                        <field name="tournament_ids"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

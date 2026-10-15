@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Tournament List View -->
+    <record id="view_tournament_list" model="ir.ui.view">
+        <field name="name">gamezone.tournament.list</field>
+        <field name="model">gamezone.tournament</field>
+
+        <field name="arch" type="xml">
+            <list>
+                <field name="tournament_name"/>
+                <field name="game_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="max_teams"/>
+                <field name="status"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Tournament Form View -->
+    <record id="view_tournament_form" model="ir.ui.view">
+        <field name="name">gamezone.tournament.form</field>
+        <field name="model">gamezone.tournament</field>
+
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="tournament_name"/>
+                        <field name="game_id"/>
+                    </group>
+
+                    <group>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="max_teams"/>
+                        <field name="status"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

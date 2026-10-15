@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Team List View -->
+    <record id="view_team_list" model="ir.ui.view">
+        <field name="name">gamezone.team.list</field>
+        <field name="model">gamezone.team</field>
+
+        <field name="arch" type="xml">
+            <list>
+                <field name="team_name"/>
+                <field name="game_id"/>
+                <field name="captain_id"/>
+                <field name="wins"/>
+                <field name="losses"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Team Form View -->
+    <record id="view_team_form" model="ir.ui.view">
+        <field name="name">gamezone.team.form</field>
+        <field name="model">gamezone.team</field>
+
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="team_name"/>
+                        <field name="game_id"/>
+                        <field name="captain_id"/>
+                    </group>
+
+                    <group>
+                        <field name="wins"/>
+                        <field name="losses"/>
+                    </group>
+
+                    <group>
+                        <field name="player_ids"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

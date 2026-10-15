@@ -1,0 +1,10 @@
+<odoo>
+    <data noupdate="1">
+        <record id="seq_gamezone_game" model="ir.sequence">
+            <field name="name">Game Sequence</field>
+            <field name="code">gamezone.game</field>
+            <field name="prefix">GAME</field>
+            <field name="padding">4</field>
+        </record>
+    </data>
+</odoo>

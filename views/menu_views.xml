@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Games Action -->
+    <record id="action_gamezone_game" model="ir.actions.act_window">
+        <field name="name">Games</field>
+        <field name="res_model">gamezone.game</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Players Action -->
+    <record id="action_gamezone_player" model="ir.actions.act_window">
+        <field name="name">Players</field>
+        <field name="res_model">gamezone.player</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Teams Action -->
+    <record id="action_gamezone_team" model="ir.actions.act_window">
+        <field name="name">Teams</field>
+        <field name="res_model">gamezone.team</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Tournaments Action -->
+    <record id="action_gamezone_tournament" model="ir.actions.act_window">
+        <field name="name">Tournaments</field>
+        <field name="res_model">gamezone.tournament</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Root Menu -->
+    <menuitem
+        id="menu_gamezone_root"
+        name="GameZone"
+    />
+
+    <!-- Games -->
+    <menuitem
+        id="menu_gamezone_games"
+        name="Games"
+        parent="menu_gamezone_root"
+        action="action_gamezone_game"
+    />
+
+    <!-- Players -->
+    <menuitem
+        id="menu_gamezone_players"
+        name="Players"
+        parent="menu_gamezone_root"
+        action="action_gamezone_player"
+    />
+
+    <!-- Teams -->
+    <menuitem
+        id="menu_gamezone_teams"
+        name="Teams"
+        parent="menu_gamezone_root"
+        action="action_gamezone_team"
+    />
+
+    <!-- Tournaments -->
+    <menuitem
+        id="menu_gamezone_tournaments"
+        name="Tournaments"
+        parent="menu_gamezone_root"
+        action="action_gamezone_tournament"
+    />
+
+</odoo>

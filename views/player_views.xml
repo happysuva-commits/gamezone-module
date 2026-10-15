@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <!-- Player List View -->
+    <record id="view_player_list" model="ir.ui.view">
+        <field name="name">gamezone.player.list</field>
+        <field name="model">gamezone.player</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="real_name"/>
+                <field name="gamer_name"/>
+                <field name="email"/>
+                <field name="contact"/>
+                <field name="wins"/>
+                <field name="losses"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Player Form View -->
+    <record id="view_player_form" model="ir.ui.view">
+        <field name="name">gamezone.player.form</field>
+        <field name="model">gamezone.player</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <group>
+                        <field name="real_name"/>
+                        <field name="gamer_name"/>
+                        <field name="email"/>
+                        <field name="contact"/>
+                        <field name="birthdate"/>
+                    </group>
+
+                    <group>
+                        <field name="game_ids" widget="many2many_tags"/>
+                        <field name="team_id"/>
+                    </group>
+
+                    <group>
+                        <field name="wins"/>
+                        <field name="losses"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
